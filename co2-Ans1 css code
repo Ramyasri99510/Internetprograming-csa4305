@@ -1,0 +1,53 @@
+body{
+    margin:0;
+    font-family:Arial;
+}
+
+header{
+    background:blue;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+nav{
+    background:black;
+    display:flex;
+}
+
+nav a{
+    color:white;
+    padding:15px;
+    text-decoration:none;
+}
+
+.container{
+    display:flex;
+}
+
+.box{
+    flex:1;
+    padding:20px;
+    border:1px solid black;
+}
+
+footer{
+    background:gray;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+/* Tablet */
+@media(max-width:768px){
+.container{
+    flex-direction:column;
+}
+}
+
+/* Mobile */
+@media(max-width:480px){
+nav{
+    flex-direction:column;
+}
+}
