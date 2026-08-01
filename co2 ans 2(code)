@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form Validation</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:350px;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+h2{
+    text-align:center;
+    color:#2575fc;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+input:focus{
+    border-color:#2575fc;
+    outline:none;
+}
+
+span{
+    font-size:13px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    background:#2575fc;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0d5be1;
+}
+
+#success{
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Registration Form</h2>
+
+<form id="myForm">
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" required>
+
+<label>Email</label>
+<input type="text" id="email" placeholder="Enter Email">
+<span id="emailError"></span>
+
+<label>Phone Number</label>
+<input type="text" id="phone" placeholder="Enter Phone Number">
+<span id="phoneError"></span>
+
+<button type="submit">Register</button>
+
+<p id="success"></p>
+
+</form>
+
+</div>
+
+<script>
+
+const email=document.getElementById("email");
+const phone=document.getElementById("phone");
+
+email.addEventListener("keyup",function(){
+
+let pattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(pattern.test(email.value)){
+document.getElementById("emailError").innerHTML="✔ Valid Email";
+document.getElementById("emailError").style.color="green";
+}
+else{
+document.getElementById("emailError").innerHTML="✖ Invalid Email";
+document.getElementById("emailError").style.color="red";
+}
+
+});
+
+phone.addEventListener("keyup",function(){
+
+let pattern=/^[0-9]{10}$/;
+
+if(pattern.test(phone.value)){
+document.getElementById("phoneError").innerHTML="✔ Valid Phone Number";
+document.getElementById("phoneError").style.color="green";
+}
+else{
+document.getElementById("phoneError").innerHTML="✖ Enter 10-digit Number";
+document.getElementById("phoneError").style.color="red";
+}
+
+});
+
+document.getElementById("myForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let phonePattern=/^[0-9]{10}$/;
+
+if(emailPattern.test(email.value) && phonePattern.test(phone.value)){
+document.getElementById("success").innerHTML="🎉 Registration Successful!";
+document.getElementById("success").style.color="green";
+}
+else{
+document.getElementById("success").innerHTML="Please enter valid details.";
+document.getElementById("success").style.color="red";
+}
+
+});
+
+</script>
+
+</body>
+</html>
