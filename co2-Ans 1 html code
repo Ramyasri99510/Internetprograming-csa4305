@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>My Retail Shop</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="box">Sidebar</div>
+
+    <div class="box">
+        <h2>Welcome</h2>
+        <p>This is a responsive webpage.</p>
+    </div>
+
+</div>
+
+<footer>
+    Footer
+</footer>
+
+</body>
+</html>
