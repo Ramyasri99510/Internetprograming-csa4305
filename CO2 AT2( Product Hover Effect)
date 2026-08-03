@@ -1,0 +1,73 @@
+1. Zoom Effect 
+The product image slightly enlarges to attract user attention. 
+.card:hover{ 
+transform:scale(1.05); 
+transition:0.4s ease; 
+} 
+2. Shadow Effect 
+A shadow appears around the product card, making it stand out. 
+CSS 
+.card:hover{ 
+box-shadow:0 12px 20px rgba(0,0,0,0.3); 
+} 
+3. Image Brightness Effect 
+CSS 
+.card img:hover{ 
+filter:brightness(110%); 
+} 
+4. Button Appearance 
+CSS 
+.button{ 
+opacity:0; 
+transition:0.4s; 
+} 
+.card:hover .button{ 
+opacity:1; 
+} 
+5. Lift-Up Effect 
+CSS 
+.card:hover{ 
+transform:translateY(-10px); 
+} 
+These animations improve user engagement without requiring JavaScript. 
+(c) Design a Hover Effect for a Product Card 
+A product card displays essential information about an item, including its image, name, price, 
+rating, and purchase button. 
+Sample HTML Code 
+HTML 
+<div class="card"> 
+<img src="product.jpg"> 
+<h3>Wireless Headphones</h3> 
+<p>₹2,999</p> 
+<button>Buy Now</button> 
+</div> 
+Sample CSS Code 
+CSS 
+.card{ 
+width:250px; 
+padding:20px; 
+border-radius:10px; 
+background:white; 
+text-align:center; 
+box-shadow:0 5px 10px gray; 
+transition:0.4s ease; 
+} 
+.card img{ 
+width:100%; 
+border-radius:10px; 
+} 
+.card:hover{ 
+transform:translateY(-8px) scale(1.05); 
+box-shadow:0 15px 30px rgba(0,0,0,0.3); 
+} 
+button{ 
+padding:10px 20px; 
+background:#0d6efd; 
+color:white; 
+border:none; 
+border-radius:5px; 
+cursor:pointer; 
+} 
+button:hover{ 
+background:#084298; 
+} 
