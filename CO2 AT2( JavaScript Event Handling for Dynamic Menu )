@@ -1,0 +1,25 @@
+Sample HTML 
+<button id="menuBtn">☰ Menu</button> 
+<ul id="menu"> 
+<li>Home</li> 
+<li>Products</li> 
+<li>About</li> 
+<li>Contact</li> 
+</ul> 
+Sample CSS 
+#menu{ 
+display:none; 
+list-style:none; 
+padding:10px; 
+} 
+.show{ 
+display:block; 
+}
+
+Sample JavaScript Code 
+JavaScript 
+let button = document.getElementById("menuBtn"); 
+let menu = document.getElementById("menu"); 
+button.addEventListener("click", function(){ 
+menu.classList.toggle("show"); 
+}); 
