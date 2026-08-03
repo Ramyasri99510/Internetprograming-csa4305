@@ -1,0 +1,48 @@
+Sample HTML 
+HTML 
+<div class="container"> 
+<header>My Blog</header> 
+<article> 
+<h2>Latest Technology Trends</h2> 
+<p>Responsive web design improves accessibility and user experience.</p> 
+</article> 
+<aside> 
+<h3>Recent Posts</h3> 
+<ul> 
+<li>HTML Basics</li> 
+<li>CSS Grid</li> 
+<li>JavaScript Events</li> 
+</ul> 
+</aside> 
+<footer> 
+Copyright © 2026 
+</footer> 
+</div> 
+Sample CSS 
+CSS 
+.container{ 
+display:flex; 
+flex-direction:column; 
+padding:20px; 
+gap:20px; 
+} 
+header,article,aside,footer{ 
+background:#f5f5f5; 
+padding:20px; 
+border-radius:10px; 
+} 
+
+Sample CSS Using Media Query 
+CSS 
+@media(min-width:768px){ 
+.container{ 
+display:flex; 
+flex-direction:row; 
+} 
+article{ 
+width:70%; 
+} 
+aside{ 
+width:30%; 
+} 
+}
