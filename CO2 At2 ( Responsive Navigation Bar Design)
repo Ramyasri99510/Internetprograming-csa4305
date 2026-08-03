@@ -1,0 +1,26 @@
+Sample HTML 
+<nav> 
+<div class="logo">ShopEasy</div> 
+<ul> 
+<li>Home</li> 
+<li>Products</li> 
+<li>Categories</li> 
+<li>Cart</li> 
+<li>Login</li> 
+</ul> 
+</nav> 
+Sample CSS 
+nav{ 
+display:flex; 
+justify-content:space-between; 
+align-items:center; 
+background:#0d6efd; 
+padding:15px; 
+} 
+nav ul{ 
+display:flex; 
+list-style:none; 
+} 
+nav ul li{ 
+margin:15px; 
+}
